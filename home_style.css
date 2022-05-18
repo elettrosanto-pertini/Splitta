@@ -1,0 +1,19 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+html{
+    height:fit-content;
+}
+
+body{
+    min-height:100vh;
+    height:100%;
+}
+
+#iniziaBtn{
+    background-color: #edc937;
+    color:#473c10;
+}
