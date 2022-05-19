@@ -17,3 +17,9 @@ body{
     background-color: #edc937;
     color:#473c10;
 }
+
+@media screen and (max-width:768px){
+    #immagine-telefono{
+        margin:auto;
+    }
+}
