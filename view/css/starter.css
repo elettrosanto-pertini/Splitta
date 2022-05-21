@@ -1,7 +1,6 @@
 *{
     margin:0px;
     padding:0px;
-    box-sizing: border-box;
 }
 
 html{
@@ -10,4 +9,8 @@ html{
 
 body{
     min-height:100vh;
+}
+
+main{
+    min-height:90vh;
 }
