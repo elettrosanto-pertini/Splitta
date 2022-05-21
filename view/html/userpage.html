@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userpage_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
+    <title>Splitta</title>
+
+</head>
+<body>
+
+    <!-- MENU DI NAVIGAZIONE -->
+
+    <nav class="navbar is-warning">
+
+        <div class="navbar-brand">
+            <figure class="image is-96x96">
+                <a href="#">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F389%2F221%2Foriginal%2Fthe-letter-s-vector.jpg&f=1&nofb=1" alt="SPLITTA!" width="80">
+                </a>
+            </figure>
+
+            <div id="burger" class="navbar-burger mt-5" data-target="myNav" role="button" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu ml-6" id="myNav">
+
+            <div class="navbar-start">
+                <a class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span>Gruppi</span>
+                </a>
+
+                <a class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span>Nuovo</span>
+                </a>
+
+                <a class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </span>
+                    <span>Resoconto</span>
+                </a>
+            </div>
+
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="button is-danger">
+                        <span class="icon">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span>Log out</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENUTO -->
+
+    <main class="py-5">
+
+        <div class="hero">
+            <div class="columns is-flex is-justify-content-center">
+                <div class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
+                    <div class="box">
+                        <div id="vetrina" class="p-2">
+                            <figure class="image is-3by1">
+                                <img id="copertina" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F8%2Ff%2F4%2F64439.jpg&f=1&nofb=1" alt="Copertina">
+                            </figure>
+
+                            <div id="nomeGruppo" class="level is-flex is-justify-content-center mt-2">
+                                <span>Nome Del Gruppo</span>
+                            </div>
+                    
+                            <div id="utente-1" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
+                                <div class="level-left"><strong>Nome utente-1</strong></div>
+                                <div class="level-right mt-0">0.00€</div>
+                            </div>
+                    
+                            <div id="utente-2" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
+                                <div class="level-left"><strong>Nome utente-2</strong></div>
+                                <div class="level-right mt-0">0.00€</div>
+                            </div>
+                    
+                            <div id="utente-3" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
+                                <div class="level-left"><strong>Nome utente-3</strong></div>
+                                <div class="level-right mt-0">0.00€</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER CONCLUSIVO -->
+    <footer class="footer is-flex is-justify-content-center" style="background-color:#ffe08a;">
+        <p class="content">Sviluppato da <a href="https://github.com/elettrosanto-pertini" target="_blank">@elettrosanto-pertini</a> usando <a href="https://bulma.io/" target="_blank">Bulma Framework</a></p>
+    </footer>
+
+    <script src="userpage.js"></script>
+</body>
+</html>
