@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/resoconto_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
+    <title>Splitta</title>
+
+</head>
+<body>
+
+    <!-- MENU DI NAVIGAZIONE -->
+
+    <nav class="navbar is-warning">
+
+        <div class="navbar-brand">
+            <figure class="image is-96x96">
+                <a href="#">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F389%2F221%2Foriginal%2Fthe-letter-s-vector.jpg&f=1&nofb=1" alt="SPLITTA!" width="80">
+                </a>
+            </figure>
+
+            <div id="burger-btn" class="navbar-burger mt-5" data-target="myNav" role="button" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu ml-6" id="myNav">
+
+            <div class="navbar-start">
+                <a href="gruppi.html" class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span>Gruppi</span>
+                </a>
+
+                <a class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span>Nuovo</span>
+                </a>
+
+                <a href="resoconto.html" class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </span>
+                    <span>Resoconto</span>
+                </a>
+
+                <a href="inviti.html" class="navbar-item ml-2">
+                    <span class="icon">
+                        <i class="fas fa-user-plus"></i>
+                    </span>
+                    <span>Inviti</span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a class="button is-danger">
+                        <span class="icon">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span>Log out</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENUTO -->
+
+    <main class="py-5">
+
+        <div class="hero">
+            <div class="columns is-flex is-justify-content-center">
+                <div class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
+                    <div class="box">
+                        <!--SINGOLA TRANSAZIONE-->
+                        <div class="level is-flex is-flex-wrap-wrap">
+                            <div class="level-right">
+                                <div class="is-flex is-flex-direction-column">
+                                    <label class="label"><strong>nome spesa</strong></label>
+                                    <p class="content">Utente1</p>
+                                    <p class="content">per: <span>Utente2,Utente5</span></p>
+                                </div>
+                            </div>
+                            <div class="level-left">
+                                <p class="content">0.00<span>€</span></p>
+                            </div>
+                        </div>
+                        <!--FINE SINGOLA TRANSAZIONE-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER CONCLUSIVO -->
+    <footer class="footer has-background-warning">
+        <p class="content has-text-centered">Sviluppato da <a href="https://github.com/elettrosanto-pertini" target="_blank">@elettrosanto-pertini</a> usando <a href="https://bulma.io" target="_blank">Bulma Framework</a></p>
+        <p class="content has-text-centered">Applicazione creata per puro fine didattico e in nessun modo commerciale.</p>
+        <p class="content has-text-centered">This app was created with no commercial intent. The only goal is to learn! <br> (I may have been inspired by already existing apps)</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const burgerBtn = document.getElementById('burger');
+const burgerBtn = document.getElementById('burger-btn');
 const navMenu = document.getElementById('myNav');
 
 burgerBtn.addEventListener('click', ()=>{
