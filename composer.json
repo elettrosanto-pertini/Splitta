@@ -1,0 +1,11 @@
+{
+    "name": "federico/splitta",
+    "type": "project",
+    "authors": [
+        {
+            "name": "elettrosanto-pertini",
+            "email": "federico.junkmail97@gmail.com"
+        }
+    ],
+    "require": {}
+}
