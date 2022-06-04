@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .field{
+            width:80%;
+            max-width:980px;
+            margin:0 auto;
+        }
+        #nuovo-gruppo{
+            margin-left:10%;
+        }
+    </style>
 
     <title>Splitta</title>
 </head>
 
-<body class="has-background-light">
+<body class="has-background-light has-navbar-fixed-top">
 
-    <nav class="navbar has-background-white">
+    <nav class="navbar has-background-white is-fixed-top">
         <div class="navbar-brand">
             <figure class="image is-64x64">
                 <a href="gruppi.html">
@@ -69,7 +80,7 @@
                 <!--BOX INVITO-->
                 <div class="box">
 
-                    <h3 class="title is-3">Nuovo Gruppo</h3>
+                    <h3 id="nuovo-gruppo" class="title is-3">Nuovo Gruppo</h3>
 
                     <form class="form">
 

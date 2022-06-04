@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/pag_gruppo_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -11,11 +12,11 @@
     <title>Splitta</title>
 
 </head>
-<body class="has-background-light">
+<body class="has-background-light has-navbar-fixed-top">
 
     <!-- MENU DI NAVIGAZIONE -->
 
-    <nav class="navbar has-background-white">
+    <nav class="navbar has-background-white is-fixed-top">
 
         <div class="navbar-brand">
             <figure class="image is-64x64">
@@ -74,7 +75,7 @@
 
     <!-- CONTENUTO -->
 
-    <main class="py-5">
+    <main class="py-5 has-background-light">
 
         <div class="hero">
             <div class="columns is-flex is-justify-content-center">
@@ -89,7 +90,7 @@
                             </a>
                         </div>
                         <div class="level-right mt-0">
-                            <a href="#" class="button is-success m-1 mr-2">
+                            <a href="#" id="tr_modal_btn" class="button is-success m-1 mr-2 js-modal-trigger" data-target="tr_modal_box">
                                 <span class="icon">
                                     <i class="fas fa-plus"></i>
                                 </span>
@@ -133,6 +134,48 @@
             </div>
         </div>
 
+        <div class="modal" id="tr_modal_box">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+
+                    <form class="form">
+
+                        <div class="field">
+                            <label class="label">Destinatario:</label>
+                            <div class="control is-flex is-flex-direction-column">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="Utente1">
+                                    Utente1
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="Utente2">
+                                    Utente2
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="field">
+                            <label class="label">Somma</label>
+                            <div class="control">
+                                <div class="is-flex is-flex-wrap-nowrap">
+                                    <span class="p-2">€</span> <input type="number" min="0.01" step="0.01" class="input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field pt-2">
+                            <button type="submit" id="transactionBtn" class="button is-small is-success">Fine</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <button class="modal-close is-large has-background-danger" aria-label="close"></button>
+        </div>
+
     </main>
 
     <!-- FOOTER CONCLUSIVO -->
@@ -143,5 +186,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/transaction_modal.js"></script>
 </body>
 </html>
