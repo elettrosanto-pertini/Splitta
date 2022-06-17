@@ -20,11 +20,11 @@
 
         <div class="navbar-brand">
             <figure class="image is-64x64">
-                <a href="gruppi.html">
+                <a href="gruppi.php">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F389%2F221%2Foriginal%2Fthe-letter-s-vector.jpg&f=1&nofb=1" alt="SPLITTA!" width="80">
                 </a>
             </figure>
-            <a href="gruppi.html"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
+            <a href="gruppi.php"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
 
             <div id="burger-btn" class="navbar-burger" data-target="myNav" role="button" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -36,21 +36,21 @@
         <div class="navbar-menu" id="myNav">
 
             <div class="navbar-start">
-                <a href="gruppi.html" class="navbar-item ml-2">
+                <a href="gruppi.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-users"></i>
                     </span>
                     <span>Gruppi</span>
                 </a>
 
-                <a href="nuovo.html" class="navbar-item ml-2">
+                <a href="nuovo.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-plus"></i>
                     </span>
                     <span>Nuovo</span>
                 </a>
 
-                <a href="inviti.html" class="navbar-item ml-2">
+                <a href="inviti.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-user-plus"></i>
                     </span>
@@ -80,30 +80,33 @@
         <div class="hero">
             <div class="columns is-flex is-justify-content-center">
                 <div class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
-                    <div class="level is-flex is-flex-wrap-wrap">
-                        <div class="level-left">
-                            <a class="button is-danger m-1">
+
+                    <div id="group-btns" class="mb-3 is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                        
+                            <a class="button is-danger mb-1 p-2">
                                 <span class="icon">
                                     <i class="fas fa-times"></i>
                                 </span>
                                 <span>Elimina Gruppo</span>
                             </a>
-                        </div>
-                        <div class="level-right mt-0">
-                            <a href="#" id="tr_modal_btn" class="button is-success m-1 mr-2 js-modal-trigger" data-target="tr_modal_box">
+                        
+                        
+                            <a href="#" id="tr_modal_btn" class="button is-success mb-1 p-2 js-modal-trigger" data-target="tr_modal_box">
                                 <span class="icon">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                 <span>Nuova Transazione</span>
                             </a>
-                            <a href="transazioni.html" class="button is-info m-1">
+
+                            <a href="transazioni.php" class="button is-info mb-1 p-2">
                                 <span class="icon">
                                     <i class="fas fa-dollar-sign"></i>
                                 </span>
                                 <span>Transazioni</span>
                             </a>
-                        </div>
+                        
                     </div>
+
                     <div class="box">
                         <div id="vetrina" class="p-2">
                             <figure class="image is-3by1">

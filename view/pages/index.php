@@ -15,11 +15,11 @@
     <nav class="navbar is-flex is-justify-content-center pt-4 pb-6 has-background-light">
         <div class="is-flex is-flex-direction-row">
             <figure class="image is-64x64">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._WaV3Wc3-6z5QMUtA9YccQHaHa%26pid%3DApi&f=1" alt="Splitta Logo">
                 </a>
             </figure>
-            <a href="index.html"><h3 class="title is-3 py-3 px-2 has-background-light">Splitta</h3></a>
+            <a href="index.php"><h3 class="title is-3 py-3 px-2 has-background-light">Splitta</h3></a>
         </div>
     </nav>
 
@@ -36,7 +36,7 @@
                             </p>
                         </div>
                         <div class="is-flex is-flex-direction-row is-justify-content-center">
-                            <a id="iniziaBtn" href="starter.html" class="button is-large"><strong>INIZIA</strong></a>
+                            <a id="iniziaBtn" href="starter.php" class="button is-large"><strong>INIZIA</strong></a>
                         </div>
                     </div>
                 </div>

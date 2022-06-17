@@ -22,3 +22,15 @@ main{
     background-color: #eee;
     border-radius:3px;
 }
+
+@media (max-width:680px){
+    #groups-btns{
+        flex-direction:column;
+        align-content: center;
+    }
+
+    #group-btns .button {
+        width:60%;
+        /* align-self: center; */
+    }
+}

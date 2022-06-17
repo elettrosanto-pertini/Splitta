@@ -20,11 +20,11 @@
 
         <div class="navbar-brand">
             <figure class="image is-64x64">
-                <a href="gruppi.html">
+                <a href="gruppi.php">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F389%2F221%2Foriginal%2Fthe-letter-s-vector.jpg&f=1&nofb=1" alt="SPLITTA!" width="80">
                 </a>
             </figure>
-            <a href="gruppi.html"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
+            <a href="gruppi.php"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
 
             <div id="burger-btn" class="navbar-burger mt-3" data-target="myNav" role="button" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -36,21 +36,21 @@
         <div class="navbar-menu" id="myNav">
 
             <div class="navbar-start">
-                <a href="gruppi.html" class="navbar-item ml-2">
+                <a href="gruppi.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-users"></i>
                     </span>
                     <span>Gruppi</span>
                 </a>
 
-                <a href="nuovo.html" class="navbar-item ml-2">
+                <a href="nuovo.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-plus"></i>
                     </span>
                     <span>Nuovo</span>
                 </a>
 
-                <a href="inviti.html" class="navbar-item ml-2">
+                <a href="inviti.php" class="navbar-item ml-2">
                     <span class="icon">
                         <i class="fas fa-user-plus"></i>
                     </span>

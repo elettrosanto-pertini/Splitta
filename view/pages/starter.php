@@ -15,11 +15,11 @@
     <nav class="navbar has-background-white">
         <div class="navbar-brand">
             <figure class="image is-64x64">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._WaV3Wc3-6z5QMUtA9YccQHaHa%26pid%3DApi&f=1" alt="Splitta Logo">
                 </a>
             </figure>
-            <a href="index.html"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
+            <a href="index.php"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
             <div class="navbar-burger" data-target="myNav" id="burger-btn">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <a href="gruppi.html" class="button is-success">Accedi</a>
+                            <a href="gruppi.php" class="button is-success">Accedi</a>
                         </div>
                     </div>
                     <div class="field">
