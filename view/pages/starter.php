@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+session_start();
+if(isset($_SESSION['user'])){
+    header('Location: gruppi.php');
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,7 +81,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <a href="gruppi.php" class="button is-success">Accedi</a>
+                            <a href="#" class="button is-success" id="login-btn">Accedi</a>
                         </div>
                     </div>
                     <div class="field">
@@ -97,5 +103,6 @@
         <p class="content has-text-centered">This app was created with no commercial intent. The only goal is to learn! <br> (I may have been inspired by already existing apps)</p>
     </footer>
     <script src="../js/starter.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

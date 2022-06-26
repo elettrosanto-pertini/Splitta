@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +57,7 @@
 
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <a class="button is-danger">
+                    <a id='logOutBtn' class="button is-danger">
                         <span class="icon">
                             <i class="fas fa-user"></i>
                         </span>

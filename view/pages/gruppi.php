@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../css/gruppi.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -54,7 +56,7 @@
             
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <a href="#" id="logOutBtn" class="button is-danger js-modal-trigger" data-target="modal-box">
+                    <a href="#" id="logOutBtn" class="button is-danger">
                         <span class="icon">
                             <i class="fas fa-user"></i>
                         </span>
@@ -106,7 +108,6 @@
         <p class="content has-text-centered">Applicazione creata per puro fine didattico e in nessun modo commerciale.</p>
         <p class="content has-text-centered">This app was created with no commercial intent. The only goal is to learn! <br> (I may have been inspired by already existing apps)</p>
     </footer>
-    <script src="../js/inviti.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
