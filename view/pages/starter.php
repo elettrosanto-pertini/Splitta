@@ -80,7 +80,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <p class="content">Non hai un account? <a href="#">Registrati</a></p>
+                            <p class="content">Non hai un account? <a href="registrazione.php">Registrati</a></p>
                         </div>
                     </div>
                 </form>
