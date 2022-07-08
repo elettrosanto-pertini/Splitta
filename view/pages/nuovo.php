@@ -90,14 +90,20 @@ session_start();
                         <div class="field">
                             <label class="label">Nome Gruppo</label>
                             <div class="control">
-                                <input type="text" class="input" placeholder="Es: Calcetto-2022">
+                                <input type="text" class="input" id="nome_gruppo" placeholder="Es: Calcetto-2022" required>
                             </div>
                         </div>
 
                         <div class="field">
                             <label class="label">Aggiungi Amici</label>
-                            <p>NandoSbando</p>
-                            <p>NelloBuddello</p>
+                            <table class="table is-narrow">
+                                <thead>
+                                    <th></th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="invite_list">
+                                </tbody>
+                            </table>
                             <div class="control pt-1">
                                 <input class="input" type="search" name="user-search" id="user-search" placeholder="Es: mario_rossi97">
                             </div>
@@ -105,7 +111,7 @@ session_start();
 
                         <div class="field">
                             <div class="control">
-                                <button class="button is-info is-small" type="button">
+                                <button id="aggiungi-btn" class="button is-info is-small" type="button">
                                     <span class="icon">
                                         <i class="fas fa-plus"></i>
                                     </span>
@@ -116,7 +122,7 @@ session_start();
 
                         <div class="field mt-6">
                             <div class="control">
-                                <button class="button is-success" type="button">Conferma</button>
+                                <button class="button is-success" id="conferma_btn" type="button">Conferma</button>
                             </div>
                         </div>
 
@@ -135,5 +141,6 @@ session_start();
     </footer>
    
     <script src="../js/main.js"></script>
+    <script src="../js/nuovo.js"></script>
 </body>
 </html>

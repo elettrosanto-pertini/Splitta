@@ -8,9 +8,8 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-include_once('../database/Database.php');
-include_once('../modelli/User.php');
-//include_once('../database/DB_constants.php');
+include_once('../../database/Database.php');
+include_once('../../modelli/User.php');
 
 $database = new Database;
 $db = $database->connect();
@@ -25,8 +24,12 @@ $User->username = $data->usr;
 $User->password = $data->pwd;
 $User->email = $data->mail;
 
-if($User->create()){
-    echo json_encode(array('message'=>'Utente registrato!'));
-}else{
-    echo json_encode(array('message'=>'ERRORE: impossibile contattare il Database. Riprovare più tardi'));
+$creation = $User->create();
+
+if($creation === true){
+    echo json_encode(array('message'=>'Utente registrato!', 'result'=>'starter.php'));
+}else if($creation === false){
+    echo json_encode(array('message'=>'ERRORE: impossibile contattare il Database. Riprovare più tardi.', 'result'=>'starter.php'));
+}else if($creation === 2){
+    echo json_encode(array('message'=>'Username non disponibile, provane un altro.', 'result'=>'registrazione.php'));
 }

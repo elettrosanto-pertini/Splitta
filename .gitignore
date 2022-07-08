@@ -1,2 +1,3 @@
 /vendor/
 database/DB_constants.php
+rootpath.php

@@ -34,7 +34,7 @@ accedi.addEventListener('click', ()=>{
         body: JSON.stringify(data)
     }
 
-    fetch('../../api/login.php', options)
+    fetch('../../api/User/login.php', options)
     .then(response=>response.json())
     .then(oggetto=>alert(oggetto.message))
     .then(()=>window.location='../pages/starter.php')

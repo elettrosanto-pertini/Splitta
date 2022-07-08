@@ -11,7 +11,7 @@ burgerBtn.addEventListener('click', ()=>{
 });
 
 logOutBtn.addEventListener('click', ()=>{
-    fetch('../../api/logout.php')
+    fetch('../../api/User/logout.php')
     .then(response=>response.json())
     .then(oggetto=>alert(oggetto.message))
     .then(()=>window.location='../pages/index.php')

@@ -1,5 +1,5 @@
 <?php
-include_once('../database/DB_constants.php');
+//require_once("../../database/DB_constants.php");
 
 class User{
 
@@ -7,7 +7,7 @@ class User{
     private $conn;
     private $table = USERS_TABLE;
 
-    //attrubuti pubblici *wink-wink*
+    //attributi pubblici *wink-wink*
     public $username;
     public $password;
     public $email;
@@ -22,30 +22,37 @@ class User{
     // FUNZIONI C,R,D PER CLASSE User
 
     public function create(){
+        $result = $this->read_single();
+        $num = $result->rowCount();
 
-        //polish raw data
-        $this->username = htmlspecialchars(stripslashes(trim($this->username)));
-        $this->password = htmlspecialchars(stripslashes(trim($this->password)));
-        $this->email = htmlspecialchars(stripslashes(($this->email)));
-
-
-        //hash password
-        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
-
-
-        //send data to DB (prepared statements)
-        $query = '
-            INSERT INTO '.$this->table.'
-            (user_name, password, user_mail) 
-            VALUES (:user, :password, :email);
-        ';
-
-        $stmt = $this->conn->prepare($query);
-
-        if($stmt->execute([':user'=>$this->username, ':password'=>$this->password, ':email'=>$this->email])){
-            return true;
+        if($num>0){
+            return 2;
         }else{
-            return false;
+
+            //polish raw data
+            $this->username = htmlspecialchars(stripslashes(trim($this->username)));
+            $this->password = htmlspecialchars(stripslashes(trim($this->password)));
+            $this->email = htmlspecialchars(stripslashes(($this->email)));
+
+
+            //hash password
+            $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+
+
+            //send data to DB (prepared statements)
+            $query = '
+                INSERT INTO '.$this->table.'
+                (user_name, password, user_mail) 
+                VALUES (:user, :password, :email);
+            ';
+
+            $stmt = $this->conn->prepare($query);
+
+            if($stmt->execute([':user'=>$this->username, ':password'=>$this->password, ':email'=>$this->email])){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 

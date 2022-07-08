@@ -38,10 +38,12 @@ function registra(){
         body: JSON.stringify(data)
     };
 
-    fetch('../../api/register.php', options)
+    fetch('../../api/User/register.php', options)
     .then(response=>response.json())
-    .then(oggetto=>alert(oggetto.message))
-    .then(()=>window.location='../pages/starter.php')
+    .then((oggetto)=>{
+        alert(oggetto.message);
+        window.location = '../pages/'+oggetto.result
+    })
     .catch(err=>alert(err));
 
     username.value = '';
