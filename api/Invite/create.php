@@ -21,12 +21,12 @@ $data = json_decode(file_get_contents('php://input'));
 session_start();
 
 //set invite inviter name
-$Invite->inviter_name = 'federico';
+$Invite->inviter_name = $_SESSION['user']['username'];
 
 //**********************FETCH DELL'ID GRUPPO************************************
 //set group
 $Group->group_name = $data->nomeGruppoData;
-$Group->creator_name = 'federico';
+$Group->creator_name = $_SESSION['user']['username'];
 
 //get group_id
 $result = $Group->read_single();
@@ -40,9 +40,7 @@ $invitati = $data->invitedArray;
 foreach($invitati as $invitato){
     $Invite->invited_name = $invitato;
     $Invite->new_group_id = $gr_id;
-    if($Invite->create()===true){
-        continue;
-    }else{
+    if($Invite->create()===false){
         exit(json_encode(array('result'=>false, 'message'=>'Accidenti! Non siamo riusciti ad inviare gli inviti. Riprova più tardi.')));
     }
 }

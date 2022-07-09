@@ -105,11 +105,12 @@ confermaBtn.addEventListener('click', ()=>{
             .then(oggetto=>{
                 if(oggetto.result === false){
                     alert(oggetto.message)
+                }else if (oggetto.result === true){
+                    window.location =  '../pages/gruppi.php'
                 }
             })
             .catch(error=>alert(error))
         })
-        .then(()=>window.location = '../pages/gruppi.php')
         .catch(error=>alert(error));
     }
 })

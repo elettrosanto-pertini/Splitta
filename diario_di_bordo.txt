@@ -1,0 +1,14 @@
+Resoconto abbastanza dettagliato circa i problemi incontrati durante la produzione di Splitta e le soluzioni apportate
+per risolverli. Tali soluzioni sono spesso arrivate come novità apprese durante il percorso  dopo una concitata fase di studio su internet.
+Altre soluzioni sono epifanie arrivate con un po' di riflessione su cose che già sapevo.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+PROBLEMA: la progettazione del db fatta in partenza è risultata essere poco pratica: la voce 'group_id' in 'groups' non era facilmente reperibile, 
+in quanto in groups non vi sono rimandi a nomi utente se non quello del creator che da solo non consente identificazione gruppo.
+SOLUZIONE: ho reso 'group_name' + 'creator_name' una UNIQUE key, così c'è un solo gruppo con un dato nome e un dato creator. 
+Questo è fondamentale quando mando gli inviti poiché posso mandare all'API un array di gente da invitare e il nome gruppo e poi grazie a $_SESSION prendere il creator. posso così creare invito.
+
+PROBLEMA: usare molteplici fetch API alla creazione del gruppo per invio inviti, creazione gruppo e creazioni istanze club.
+SOLUZIONE: il fetch API è una Promise, e dunque può essere annidiata in altre istanze di fetch. Se c'è da fare nesting preferisco le Promise ad Async/Await.
+
