@@ -70,34 +70,8 @@ session_start();
     <main class="pt-6 mb-6">
         <div class="columns is-flex is-justify-content-center">
             <div id= "bacheca" class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
-                
-                <!--BOX INVITO-->
-
-                <div class="box">
-                    <div class="level is-flex is-flex-wrap-wrap">
-                        <div class="level-right">
-                            <a href="pag_gruppo.php" class="has-text-black">
-                                <div class="is-flex is-flex-direction-column">
-                                    <p class="content">
-                                        <strong>Nome Gruppo</strong>
-                                    </p>
-                                    <p class="content is-small">
-                                        Bilancio: <span id="bilancio">0.00€</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="level-left">
-                            <a class="button is-danger is-small">
-                                <span class="icon">
-                                    <i class="fas fa-times"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!--FINE BOX INVITO-->
+                <!--BOX GRUPPO-->
+                <!--FINE BOX GRUPPO-->
             </div>
         </div>
     </main>
@@ -109,5 +83,6 @@ session_start();
         <p class="content has-text-centered">This app was created with no commercial intent. The only goal is to learn! <br> (I may have been inspired by already existing apps)</p>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/gruppi.js"></script>
 </body>
 </html>
