@@ -9,6 +9,7 @@ class Group{
     public $total_credit;
     public $size;
     public $creator_name;
+    public $group_id;
 
     public function __construct($db){
         $this->conn = $db;
@@ -65,6 +66,25 @@ class Group{
         $stmt->bindParam(':group_name', $this->group_name);
         $stmt->bindParam(':creator_name', $this->creator_name);
         
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    public function name_check(){
+        $query='
+        SELECT * FROM '.$this->table.' 
+        WHERE group_id=:group_id AND group_name=:group_name ;
+        ';
+
+        $this->group_name = htmlspecialchars(stripslashes(trim($this->group_name)));
+        $this->group_id = htmlspecialchars(stripslashes(trim($this->group_id)));
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':group_name', $this->group_name);
+        $stmt->bindParam(':group_id', $this->group_id);
+
         $stmt->execute();
 
         return $stmt;

@@ -2,6 +2,8 @@
 <html lang="en">
 <?php 
 session_start();
+$_SESSION['gruppo_id'] = $_GET['gruppo_id'];
+$_SESSION['group_name'] = $_GET['group_name'];
 ?>
 <head>
     <meta charset="UTF-8">
@@ -116,11 +118,11 @@ session_start();
                                 <img id="copertina" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F8%2Ff%2F4%2F64439.jpg&f=1&nofb=1" alt="Copertina">
                             </figure>
 
-                            <div id="nomeGruppo" class="level is-flex is-justify-content-center mt-2">
+                            <div id="nomeGruppo" class="level is-flex is-justify-content-center mt-2 has-text-weight-bold">
                                 <span>Nome Del Gruppo</span>
                             </div>
                     
-                            <div id="utente-1" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
+                            <!-- <div id="utente-1" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
                                 <div class="level-left"><strong>Nome utente-1</strong></div>
                                 <div class="level-right mt-0">0.00€</div>
                             </div>
@@ -133,7 +135,7 @@ session_start();
                             <div id="utente-3" class="level p-2 hovera is-flex is-flex-wrap-nowrap">
                                 <div class="level-left"><strong>Nome utente-3</strong></div>
                                 <div class="level-right mt-0">0.00€</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -193,5 +195,6 @@ session_start();
 
     <script src="../js/main.js"></script>
     <script src="../js/transaction_modal.js"></script>
+    <script src="../js/pag_gruppo.js"></script>
 </body>
 </html>
