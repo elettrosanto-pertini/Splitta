@@ -88,7 +88,7 @@ $_SESSION['group_name'] = $_GET['group_name'];
 
                     <div id="group-btns" class="mb-3 is-flex is-justify-content-space-between is-flex-wrap-wrap">
                         
-                            <a class="button is-danger mb-1 p-2">
+                            <a id="eliminaGruppo" class="button is-danger mb-1 p-2 js-modal-trigger" data-target="eliminaGruppo-modal-box">
                                 <span class="icon">
                                     <i class="fas fa-times"></i>
                                 </span>
@@ -142,6 +142,8 @@ $_SESSION['group_name'] = $_GET['group_name'];
             </div>
         </div>
 
+        <!-- MODALS -->
+
         <div class="modal" id="tr_modal_box">
             <div class="modal-background"></div>
             <div class="modal-content">
@@ -184,6 +186,27 @@ $_SESSION['group_name'] = $_GET['group_name'];
             <button class="modal-close is-large has-background-danger" aria-label="close"></button>
         </div>
 
+        <div class="modal" id="eliminaGruppo_modal_box">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+
+                    <p class="content">
+                        Sei sicuro di voler eliminare il gruppo? I tuoi amici potrebbero pensare che vuoi far sparire i tuoi buffi!
+                    </p>
+                    <div class="level">
+                        <div class="level-left">
+                            <button id="eliminaGruppo-effective" class="button is-danger" onclick="deleteGroup(this)">Elimina</button>
+                        </div>
+                        <div class="level-right">
+                            <button class="annulla-btn button is-info">Annulla</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-close is-large has-background-danger" aria-label="close"></button>
+        </div>
+
     </main>
 
     <!-- FOOTER CONCLUSIVO -->
@@ -194,7 +217,7 @@ $_SESSION['group_name'] = $_GET['group_name'];
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/transaction_modal.js"></script>
+    <script src="../js/pag_gruppo_modals.js"></script>
     <script src="../js/pag_gruppo.js"></script>
 </body>
 </html>

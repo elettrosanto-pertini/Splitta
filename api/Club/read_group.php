@@ -30,7 +30,7 @@ $group_name = htmlspecialchars(stripslashes($_SESSION["group_name"]));
 $result = $Club->read_from_group_id();
 $result = $result->fetchAll();
 
-$risposta = ['result'=>true, 'utenti'=>[], 'group_name'=>$group_name];
+$risposta = ['result'=>true, 'utenti'=>[], 'group_name'=>$group_name, 'gruppo_id'=>$_SESSION['gruppo_id']];
 
 if($nameCheck<=0){
     $risposta['result']=false;

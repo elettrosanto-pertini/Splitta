@@ -16,6 +16,9 @@ window.addEventListener('load', ()=>{
     .then(oggetto=>{
         if(oggetto.result===true){
             nomeGrouppoEl.textContent = oggetto.group_name
+            document.querySelector('#eliminaGruppo').id = oggetto.gruppo_id
+            document.querySelector('#eliminaGruppo-effective').id = oggetto.gruppo_id
+
             oggetto.utenti.forEach(element=>{
                 let outerDiv =document.createElement('div')
                 outerDiv.classList = "level p-2 hovera is-flex is-flex-wrap-nowrap"
@@ -31,6 +34,7 @@ window.addEventListener('load', ()=>{
                 outerDiv.firstChild.textContent = element.nome
                 outerDiv.lastChild.textContent = element.balance+'€'
                 document.querySelector('#vetrina').append(outerDiv)
+
             })
         }else{
             document.querySelector('#vetrina').innerHTML = noGroup
@@ -38,3 +42,27 @@ window.addEventListener('load', ()=>{
         }
     })
 })
+
+function deleteGroup(questo){
+    let deletedId = questo.id
+
+    let data = {deletedId}
+    let options = {
+        method:'POST',
+        headers:{
+            'Content-type':'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch('../../api/Group/delete.php', options)
+    .then(response=>response.json())
+    .then(oggetto=>{
+        alert(oggetto.message)
+        if(oggetto.result===true){
+            window.location = '../pages/gruppi.php'
+        }else{
+            window.location.reload()
+        }
+    })
+}

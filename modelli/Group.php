@@ -52,6 +52,24 @@ class Group{
         }
     }
 
+    public function delete(){
+        $query='DELETE FROM '.$this->table.'
+        WHERE group_id=:group_id LIMIT 1 ;
+        ';
+
+        $this->group_id = htmlspecialchars(stripslashes(trim($this->group_id)));
+
+        $stmt= $this->conn->prepare($query);
+        $stmt->bindParam(':group_id', $this->group_id);
+        
+        if($stmt->execute()){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
     
     public function read_single(){
         $this->group_name = htmlspecialchars(stripslashes(trim($this->group_name)));
@@ -89,5 +107,6 @@ class Group{
 
         return $stmt;
     }
+
 
 }
