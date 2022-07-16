@@ -3,6 +3,7 @@ class Invite{
     private $conn;
     private $table = INVITES_TABLE;
 
+    public $invite_id;
     public $inviter_name;
     public $invited_name;
     public $new_group_id;
@@ -33,5 +34,67 @@ class Invite{
         }else{
             return false;
         }
+    }
+
+    public function read(){
+        $query='SELECT * FROM '.$this->table.' 
+        WHERE invited_name=:invited_name ;
+        ';
+
+        $this->invited_name = htmlspecialchars(stripslashes($this->invited_name));
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':invited_name', $this->invited_name);
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    public function read_single(){
+        $query='SELECT * FROM '.$this->table.' 
+        WHERE invite_id=:invite_id';
+
+        $this->invite_id = htmlspecialchars(stripslashes($this->invite_id));
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':invite_id', $this->invite_id);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);        
+    }
+
+    public function delete(){
+        $query='DELETE FROM '.$this->table.' 
+        WHERE invite_id=:invite_id ;';
+
+         //polish raw data
+         $this->invite_id = htmlspecialchars(stripslashes($this->invite_id));
+        
+ 
+         //execute statement
+         $stmt = $this->conn->prepare($query);
+ 
+         $stmt->bindParam(':invite_id', $this->invite_id);
+ 
+         if($stmt->execute() === true){
+             return true;
+         }else{
+             return false;
+         }
+    }
+
+    public function get_group_name(){
+        $query='SELECT group_name FROM '.GROUPS_TABLE.'
+        WHERE group_id = :new_group_id
+        ';
+
+        //$this->new_group_id = htmlspecialchars(stripslashes($this->new_group_id));
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':new_group_id', $this->new_group_id);
+        $stmt->execute();
+
+        return $stmt;
     }
 }

@@ -12,6 +12,29 @@ class Club{
         $this->conn = $db;
     }
 
+    public function create(){
+        //polish raw data
+        $this->club_user_name = htmlspecialchars(stripslashes(trim($this->club_user_name)));
+        $this->club_group_id = htmlspecialchars(stripslashes(trim($this->club_group_id)));
+        $this->balance = 0;
+
+        //invio a Db
+        $query='INSERT INTO '.$this->table.'
+        (club_user_name, club_group_id, balance) 
+        VALUES (:club_user_name, :club_group_id, :balance);';
+
+        $stmt= $this->conn->prepare($query);
+
+        $stmt->bindParam(':club_user_name', $this->club_user_name);
+        $stmt->bindParam(':club_group_id', $this->club_group_id);
+        $stmt->bindParam(':balance', $this->balance);
+
+        if($stmt->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function read_from_username(){
         $query='SELECT * FROM '.$this->table.' 
