@@ -26,7 +26,7 @@ if(isset($_SESSION['user'])){
                 </a>
             </figure>
             <a href="index.php"><h3 class="title is-3 py-3 px-2 has-background-white">Splitta</h3></a>
-            <div class="navbar-burger" data-target="myNav" id="burger-btn">
+            <!-- <div class="navbar-burger" data-target="myNav" id="burger-btn">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -39,7 +39,7 @@ if(isset($_SESSION['user'])){
                     <a href="#" id="accediBtn" class="button is-warning js-modal-trigger" data-target="modal-box">Accedi</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </nav>
 
     <main class="pt-6 mb-6">
@@ -50,6 +50,9 @@ if(isset($_SESSION['user'])){
                         <div class="box">
                             <h1 class="title is-1">Nessun Gruppo</h1>
                             <p id="warning-message" class="content">Accedi per creare nuovi gruppi coi tuoi amici!</p>
+                            <div class="is-flex is-justify-content-center">
+                            <a href="#" id="accediBtn" class="button is-warning js-modal-trigger" data-target="modal-box">Accedi</a>
+                            </div>
                         </div>
                     </div>
                 </div>

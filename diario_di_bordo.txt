@@ -12,3 +12,9 @@ Questo è fondamentale quando mando gli inviti poiché posso mandare all'API un 
 PROBLEMA: usare molteplici fetch API alla creazione del gruppo per invio inviti, creazione gruppo e creazioni istanze club.
 SOLUZIONE: il fetch API è una Promise, e dunque può essere annidiata in altre istanze di fetch. Se c'è da fare nesting preferisco le Promise ad Async/Await.
 
+
+
+DA AGGIUNGERE: 
+1. 'Edit Button' nella pagina delle transazioni
+2. DB -> aggiungere limite di persone iscrivibili ad un gruppo (5)
+3. DB -> aggiungere limite di persone iscrivibili alla piattaforma (15)

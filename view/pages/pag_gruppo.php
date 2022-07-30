@@ -11,7 +11,7 @@ $_SESSION['group_name'] = $_GET['group_name'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/pag_gruppo_style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     
     <title>Splitta</title>
@@ -96,14 +96,14 @@ $_SESSION['group_name'] = $_GET['group_name'];
                             </a>
                         
                         
-                            <a href="#" id="tr_modal_btn" class="button is-success mb-1 p-2 js-modal-trigger" data-target="tr_modal_box">
+                            <!-- <a href="#" id="tr_modal_btn" class="button is-success mb-1 p-2 js-modal-trigger" data-target="tr_modal_box">
                                 <span class="icon">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                 <span>Nuova Transazione</span>
-                            </a>
-
-                            <a href="transazioni.php" class="button is-info mb-1 p-2">
+                            </a> -->
+                        
+                            <a href="transazioni.php" class="button is-info mb-1 p-2" name="transazione" value="<?php echo $_GET['gruppo_id']?>">
                                 <span class="icon">
                                     <i class="fas fa-dollar-sign"></i>
                                 </span>

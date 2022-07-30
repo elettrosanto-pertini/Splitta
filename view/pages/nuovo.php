@@ -2,6 +2,9 @@
 <html lang="en">
 <?php 
 session_start();
+if(isset($_SESSION['gruppo_id'])){
+    $_SESSION['gruppo_id']='';
+}
 ?>
 <head>
     <meta charset="UTF-8">

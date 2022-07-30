@@ -40,7 +40,7 @@ if($nameCheck<=0){
     }
 }
 
-$_SESSION['gruppo_id'] = '';
-$_SESSION['group_name'] = '';
+
+//$_SESSION['group_name'] = '';
 
 exit(json_encode($risposta));

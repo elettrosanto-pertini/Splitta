@@ -2,6 +2,12 @@
 <html lang="en">
 <?php 
 session_start();
+if(isset($_SESSION['gruppo_id'])){
+    $_SESSION['gruppo_id']='';
+}
+if(isset($_SESSION['group_name'])){
+    $_SESSION['group_name']='';
+}
 ?>
 <head>
     <meta charset="UTF-8">

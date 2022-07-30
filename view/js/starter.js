@@ -1,13 +1,13 @@
-const burgerBtn = document.getElementById('burger-btn');
-const myNavEl = document.getElementById('myNav');
+// const burgerBtn = document.getElementById('burger-btn');
+// const myNavEl = document.getElementById('myNav');
 const accediBtnEl = document.getElementById('accediBtn');
 const modalBoxEl = document.getElementById('modal-box');
 const modalBackgroundEl = document.getElementById('modalBackground');
 
-burgerBtn.addEventListener('click', ()=>{
-    burgerBtn.classList.toggle('is-active');
-    myNavEl.classList.toggle('is-active');
-});
+// burgerBtn.addEventListener('click', ()=>{
+//     burgerBtn.classList.toggle('is-active');
+//     myNavEl.classList.toggle('is-active');
+// });
 
 accediBtnEl.addEventListener('click', ()=>{
     modalBoxEl.classList.add('is-active');

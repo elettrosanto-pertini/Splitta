@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     
     <title>Splitta</title>
@@ -82,6 +82,7 @@ session_start();
         <div class="hero">
             <div class="columns is-flex is-justify-content-center">
                 <div class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
+                    <a href="pag_gruppo.php?gruppo_id=<?php echo $_SESSION['gruppo_id']?>&group_name=<?php echo $_SESSION['group_name']?>"><h3 class="title is-3 has-text-centered"><?php echo $_SESSION['group_name']?></h3></a>
                     <div class="level is-flex is-flex-wrap-wrap">
                         <div class="level-right mt-0">
                             <a href="#" id="tr_modal_btn" class="button is-success js-modal-trigger" data-target="tr_modal_box">
@@ -92,21 +93,23 @@ session_start();
                             </a>
                         </div>
                     </div>
-                    <div class="box">
+                    <div id="bacheca">
                         <!--SINGOLA TRANSAZIONE-->
-                        <div class="level is-flex is-flex-wrap-wrap">
-                            <div class="level-right">
-                                <div class="is-flex is-flex-direction-column">
-                                    <label class="label"><strong>nome spesa</strong></label>
-                                    <p class="content mb-0"><strong>Da:</strong> <span>Utente1</span></p>
-                                    <p class="content mb-0"><strong>Per:</strong> <span>Utente2,Utente5</span></p>
-                                    <p class="content mb-0"><strong>Data:</strong> <span>25-05-2022</span></p>
+                        <!-- <div class="box">
+                            <div class="level is-flex is-flex-wrap-wrap">
+                                <div class="level-right">
+                                    <div class="is-flex is-flex-direction-column">
+                                        <label class="label"><strong>nome spesa</strong></label>
+                                        <p class="content mb-0"><strong>Da:</strong> <span>Utente1</span></p>
+                                        <p class="content mb-0"><strong>Per:</strong> <span>Utente2,Utente5</span></p>
+                                        <p class="content mb-0"><strong>Data:</strong> <span>25-05-2022</span></p>
+                                    </div>
+                                </div>
+                                <div class="level-left">
+                                    <p class="content"><span>0.00</span>€</p>
                                 </div>
                             </div>
-                            <div class="level-left">
-                                <p class="content"><span>0.00</span>€</p>
-                            </div>
-                        </div>
+                        </div> -->
                         <!--FINE SINGOLA TRANSAZIONE-->
                     </div>
                 </div>
@@ -119,34 +122,40 @@ session_start();
                 <div class="box">
 
                     <form class="form">
+                        <div class="field">
+                            <label class="label">Mittente:</label>
+                            <div class="control is-flex is-flex-direction-column is-flex-wrap-wrap" id="mittente">
+                                
+                            </div>
+                        </div>
 
                         <div class="field">
                             <label class="label">Destinatario:</label>
                             <div class="control is-flex is-flex-direction-column" id="destinatari">
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Utente1">
-                                    Utente1
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" value="Utente2">
-                                    Utente2
-                                </label>
+                                
                             </div>
                         </div>
 
                         <hr>
 
                         <div class="field">
+                            <label class="label">Titolo</label>
+                            <div class="control">
+                                <input id="nomeSpesa" type="text" class="input" placeholder="Es: Birra x2">
+                            </div>
+                        </div>
+
+                        <div class="field">
                             <label class="label">Somma</label>
                             <div class="control">
                                 <div class="is-flex is-flex-wrap-nowrap">
-                                    <span class="p-2">€</span> <input type="number" min="0.01" step="0.01" class="input">
+                                    <span class="p-2">€</span> <input type="number" min="0.01" step="0.01" class="input" id="somma">
                                 </div>
                             </div>
                         </div>
 
                         <div class="field pt-4">
-                            <button type="submit" id="transactionBtn" class="button is-normal is-success">Fine</button>
+                            <button type="button" id="transactionBtn" class="button is-normal is-success">Fine</button>
                         </div>
 
                     </form>
@@ -167,5 +176,7 @@ session_start();
 
     <script src="../js/main.js"></script>
     <script src="../js/transaction_modal.js"></script>
+    <script src="../js/transazioni.js"></script>
+    <script src="../js/quota_engine.js"></script>
 </body>
 </html>
