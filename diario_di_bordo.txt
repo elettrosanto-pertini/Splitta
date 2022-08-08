@@ -12,8 +12,8 @@ Questo è fondamentale quando mando gli inviti poiché posso mandare all'API un 
 2) PROBLEMA: usare molteplici fetch API alla creazione del gruppo per invio inviti, creazione gruppo e creazioni istanze club.
 SOLUZIONE: il fetch API è una Promise, e dunque può essere annidiata in altre istanze di fetch. Se c'è da fare nesting preferisco le Promise ad Async/Await.
 
-3)PROBLEMA: Ho cercato di separare il più possibile il client dal server ma ci sono comunque alcuni punti di contatto poco eleganti tramite superglobals (PHP). Questi trasportano informazioni al controller direttamente invece di passare tramite richiesta come il resto dei dati. (Bisogna dunque guardare in due posti in caso di problemi invece di andare diretti all'unico punto di contatto).
-SOLUZIONE:   +++ lavori in corso +++
+3)PROBLEMA: Ho cercato di separare il più possibile il client dal server ma ci sono comunque alcuni punti di contatto poco eleganti tramite superglobals (PHP). Questi trasportano informazioni al controller direttamente invece di passare tramite richiesta come il resto dei dati. (In caso di problemi, bisogna dunque guardare in due posti invece di andare diretti all'unico punto di contatto).
+SOLUZIONE:   +++ lavori in corso :) +++
 
 
 DA AGGIUNGERE: 
