@@ -144,7 +144,7 @@ $_SESSION['group_name'] = $_GET['group_name'];
 
         <!-- MODALS -->
 
-        <div class="modal" id="tr_modal_box">
+        <!-- <div class="modal" id="tr_modal_box">
             <div class="modal-background"></div>
             <div class="modal-content">
                 <div class="box">
@@ -184,7 +184,7 @@ $_SESSION['group_name'] = $_GET['group_name'];
                 </div>
             </div>
             <button class="modal-close is-large has-background-danger" aria-label="close"></button>
-        </div>
+        </div> -->
 
         <div class="modal" id="eliminaGruppo_modal_box">
             <div class="modal-background"></div>

@@ -7,7 +7,7 @@ const rigaUtente = `
 
 const noGroup = `<div class="container">
     <h3 class="title is-3">Nessun Gruppo</h3>
-    <p id="warning-message" class="content">Wow, bravo! Il bimbo autistico sa smanettare con l'URL per fare l'HaCkEr ihihihi! Ora però per favore restituisci il PC ad un adulto, grazie</p>
+    <p id="warning-message" class="content">Injection riuscita alla perfezione, sei dentro i nostri sistemi. Ci arrendiamo a te, Sam Sepiol</p>
 </div>` 
 
 window.addEventListener('load', ()=>{

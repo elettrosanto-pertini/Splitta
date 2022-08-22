@@ -68,10 +68,11 @@ if(isset($_SESSION['user'])){
                 <form class="form">
                     <div class="field">
                         <div class="control has-icons-left">
-                            <input id="nameField" type="text" class="input" placeholder="Username" required>
+                            <input id="nameField" type="text" class="input" max="127" placeholder="Username" required>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
+                            <span id="username-help"></span>
                         </div>
                     </div>
                     <div class="field">
@@ -80,6 +81,7 @@ if(isset($_SESSION['user'])){
                             <span class="icon is-small is-left">
                                 <i class="fas fa-lock"></i>
                             </span>
+                            <span id="password-help"></span>
                         </div>
                     </div>
                     <div class="field">
@@ -105,6 +107,7 @@ if(isset($_SESSION['user'])){
         <p class="content has-text-centered">Applicazione creata per puro fine didattico e in nessun modo commerciale.</p>
         <p class="content has-text-centered">This app was created with no commercial intent. The only goal is to learn! <br> (I may have been inspired by already existing apps)</p>
     </footer>
+    <script src="../js/main.js"></script>
     <script src="../js/starter.js"></script>
     <script src="../js/login.js"></script>
 </body>

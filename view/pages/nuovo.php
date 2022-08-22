@@ -95,6 +95,7 @@ if(isset($_SESSION['gruppo_id'])){
                             <div class="control">
                                 <input type="text" class="input" id="nome_gruppo" placeholder="Es: Calcetto-2022" required>
                             </div>
+                            <span id="nomeGruppo-help"></span>
                         </div>
 
                         <div class="field">
@@ -110,6 +111,7 @@ if(isset($_SESSION['gruppo_id'])){
                             <div class="control pt-1">
                                 <input class="input" type="search" name="user-search" id="user-search" placeholder="Es: mario_rossi97">
                             </div>
+                            <span id="invitato-help" class="aiuto"></span>
                         </div>
 
                         <div class="field">
@@ -145,5 +147,6 @@ if(isset($_SESSION['gruppo_id'])){
    
     <script src="../js/main.js"></script>
     <script src="../js/nuovo.js"></script>
+    <script src="../js/nuovo_validation.js"></script>
 </body>
 </html>

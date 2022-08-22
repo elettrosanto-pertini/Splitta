@@ -1,6 +1,7 @@
 const aggiungiBtn = document.getElementById('aggiungi-btn');
 const userSearchEl = document.getElementById('user-search');
 const inviteListEl = document.getElementById('invite_list');
+const nomeGruppoEl = document.querySelector('#nome_gruppo')
 
 let invitedArray = [];
 
@@ -75,7 +76,7 @@ confermaBtn.addEventListener('click', ()=>{
     if(invitedArray.length === 0){
         alert('Magari invita qualcuno, genio.')
     }else{
-        const nomeGruppoEl = document.getElementById('nome_gruppo');
+        // const nomeGruppoEl = document.getElementById('nome_gruppo');
         const nomeGruppoData = nomeGruppoEl.value;
         const sizeData = invitedArray.length + 1;
 

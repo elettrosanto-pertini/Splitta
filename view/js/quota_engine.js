@@ -1,4 +1,7 @@
 //const mittenteEl = document.querySelector('#mittente')
+let nomeSpesa = document.querySelector('#nomeSpesa')
+let sommaEl = document.querySelector('#somma')
+
 let usersData
 fetch('../../api/Club/read_group.php')
 .then(response=>response.json())
@@ -8,14 +11,17 @@ fetch('../../api/Club/read_group.php')
 .catch(errore=>alert('OPS C\'è stato un problema interno. Riprova più tardi. \n ERRORE: '+errore))
 .finally()
 
+
+// CREAZIONE DELLA TRANSAZIONE
+
 document.querySelector('#transactionBtn').addEventListener('click', ()=>{
 
     let tuttiDestinatari = document.querySelectorAll('.destinatario')
     let tuttiMittenti = document.querySelectorAll('.mittente')
     let destinatariArray = []
     let mittenteUsr = ''
-    let somma = document.querySelector('#somma').value
-    let nomeSpesa = document.querySelector('#nomeSpesa')
+    let somma = sommaEl.value
+    
 
     tuttiMittenti.forEach(element=>{
         if(element.checked === true){

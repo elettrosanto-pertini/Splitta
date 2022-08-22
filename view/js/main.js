@@ -1,6 +1,12 @@
 const burgerBtn = document.getElementById('burger-btn');
 const navMenu = document.getElementById('myNav');
+const rightStringLength = (stringa, lunghezza)=>{
+    if(stringa.length > lunghezza){
+        return false
+    }
 
+    return true
+}
 const logOutBtn = document.getElementById('logOutBtn');
 
 burgerBtn.addEventListener('click', ()=>{

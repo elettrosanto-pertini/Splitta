@@ -82,7 +82,7 @@ session_start();
         <div class="hero">
             <div class="columns is-flex is-justify-content-center">
                 <div class="column is-10-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
-                    <a href="pag_gruppo.php?gruppo_id=<?php echo $_SESSION['gruppo_id']?>&group_name=<?php echo $_SESSION['group_name']?>"><h3 class="title is-3 has-text-centered"><?php echo $_SESSION['group_name']?></h3></a>
+                    <h3 class="title is-3 has-text-centered"><a href="pag_gruppo.php?gruppo_id=<?php echo $_SESSION['gruppo_id']?>&group_name=<?php echo $_SESSION['group_name']?>"><?php echo $_SESSION['group_name']?></a></h3>
                     <div class="level is-flex is-flex-wrap-wrap">
                         <div class="level-right mt-0">
                             <a href="#" id="tr_modal_btn" class="button is-success js-modal-trigger" data-target="tr_modal_box">
@@ -141,7 +141,7 @@ session_start();
                         <div class="field">
                             <label class="label">Titolo</label>
                             <div class="control">
-                                <input id="nomeSpesa" type="text" class="input" placeholder="Es: Birra x2">
+                                <input id="nomeSpesa" type="text" class="input" placeholder="Es: Birra x2" required>
                             </div>
                         </div>
 
@@ -149,13 +149,13 @@ session_start();
                             <label class="label">Somma</label>
                             <div class="control">
                                 <div class="is-flex is-flex-wrap-nowrap">
-                                    <span class="p-2">€</span> <input type="number" min="0.01" step="0.01" class="input" id="somma">
+                                    <span class="p-2">€</span> <input type="number" min="0" step="0.01" class="input" id="somma" required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="field pt-4">
-                            <button type="button" id="transactionBtn" class="button is-normal is-success">Fine</button>
+                            <button type="button" id="transactionBtn" class="button is-normal is-success" disabled>Fine</button>
                         </div>
 
                     </form>
