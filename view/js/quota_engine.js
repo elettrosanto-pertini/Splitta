@@ -67,7 +67,7 @@ document.querySelector('#transactionBtn').addEventListener('click', ()=>{
 
     // POST them back (through Club model)
     let options = {
-        method: 'POST',
+        method: 'PUT',
         headers:{
             'Content-Type':'application/json'
         },

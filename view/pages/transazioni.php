@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <?php 
 session_start();
+if(!isset($_SESSION['user'])){
+    echo 'ACCESS DENIED';
+}else{
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -180,3 +184,4 @@ session_start();
     <script src="../js/quota_engine.js"></script>
 </body>
 </html>
+<?php } ?>

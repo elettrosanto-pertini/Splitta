@@ -48,7 +48,7 @@ function deleteGroup(questo){
 
     let data = {deletedId}
     let options = {
-        method:'POST',
+        method:'DELETE',
         headers:{
             'Content-type':'application/json'
         },

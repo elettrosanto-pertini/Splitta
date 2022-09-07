@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <?php 
 session_start();
 $_SESSION['gruppo_id'] = $_GET['gruppo_id'];
 $_SESSION['group_name'] = $_GET['group_name'];
+if(!isset($_SESSION['user'])){
+    echo 'ACCESS DENIED';
+}else{
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -221,3 +225,4 @@ $_SESSION['group_name'] = $_GET['group_name'];
     <script src="../js/pag_gruppo.js"></script>
 </body>
 </html>
+<?php }?>
