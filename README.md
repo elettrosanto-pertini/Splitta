@@ -4,6 +4,7 @@
 Splitta è una applicazione web che ha l'obiettivo di tenere traccia dei movimenti di denaro all'interno di un gruppo di persone, calcolando le somme dovute dai debitori ai creditori.
 L'ispirazione viene da <a href="https://splid.app/">Splid</a>. Ovviamente non ho intenzione di commercializzare la mia app, il progetto ha il solo scopo didattico.
 <hr>
+
 ## Cosa fa
 L'app offre la possibilità, previa registrazione, di creare dei "gruppi", cioè delle stanze in cui si possono invitare altri utenti. I gruppi sono pensati per rappresentare una attività 
 in cui sono previsti scambi di denaro tra più persone su un periodo di tempo prolungato (Es. gruppi tipo: 'vacanze', 'coinquilini', 'organizzazione ferragosto'...).
