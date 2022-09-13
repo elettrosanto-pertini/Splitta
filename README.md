@@ -25,3 +25,7 @@ Mi sono informato sull'architettura MVC e ho deciso di applicarla per prendere d
 Ho costruito un luogo dove ho inserito tutto e il solo codice che riceve delle richieste e dal client e opera di conseguenza, chiedendo a sua volta l'intervento del model. Riceve la risposta del Model, la manipola e la restituisce al client. In pratica è il controller.<br><br>
 <li>PDO</li>
 In partiolare ho delegato al Model il compito di pulire i dati rozzi prima di passarli al DB. Inoltre, sempre nel Model ho usato il PDO per la gestione delle richieste tramite prepared statements.
+
+<h2>Database</h2>
+Ho utilizzato MySQL poiché parte del pacchetto xampp insieme ad apache e php. Di seguito lo Schema delle relazioni.
+![Schema delle Relazioni] (/schemaSplittaDB.png?raw=true 'Schema di Splitta')
