@@ -29,4 +29,4 @@ In partiolare ho delegato al Model il compito di pulire i dati rozzi prima di pa
 ## *Database*
 Ho utilizzato MySQL poiché parte del pacchetto xampp insieme ad apache e php. Di seguito lo Schema delle relazioni.
 
-![Schema delle Relazioni](/schemaSplittaDb.png)
+![Schema delle Relazioni](https://github.com/elettrosanto-pertini/Splitta/blob/main/schemaSplittaDB.png)
